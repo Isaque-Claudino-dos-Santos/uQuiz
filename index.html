@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Dog</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- SEARCH AREA -->
+    <main class="container">
+      <header class="heading">
+        <h1 class="heading-logo">iQUIZ</h1>
+      </header>
+
+      <div class="input-container">
+        <input
+          type="text"
+          id="response"
+          name="pesquisa"
+          placeholder="Search..."
+        />
+        <img src="./img/Lupa_Search.svg" alt="Lupe" />
+        <div class="butt">
+          <button type="button" id="btn-submit">Enviar</button>
+        </div>
+      </div>
+
+      <!-- CATEGORIA -->
+
+      <div class="category-container">
+        <h3 class="heading-category">Categorias:</h3>
+        <input type="radio" id="general" name="category" value="General" />
+        <label for="general">Geral</label><br />
+        <input
+          type="radio"
+          id="sports_and_outdoors"
+          name="category"
+          value="Sports and Outdoors"
+        />
+        <label for="sports_and_outdoors">Esportes</label><br />
+        <input type="radio" id="education" name="category" value="Education" />
+        <label for="education">Educação</label>
+        <input
+          type="radio"
+          id="collection"
+          name="category"
+          value="Collection"
+        />
+        <label for="collection">Coleções</label>
+        <input
+          type="radio"
+          id="competition"
+          name="category"
+          value="Competition"
+        />
+        <label for="competition">Competição</label>
+        <input
+          type="radio"
+          id="observation"
+          name="category"
+          value="Observation"
+        />
+        <label for="observation">Observação</label>
+      </div>
+
+      <!-- DICA -->
+      <div class="hint">
+        <p class="hint-set">DICA AQUI</p>
+      </div>
+
+      <!-- STATS BLOCK -->
+      <div class="stats">
+        <p name="results_Feedback" id="feedback-response">Estatistica:</p>
+      </div>
+
+      <!-- SENTS -->
+
+      <div class="Lista">
+        <ul id="attempt"></ul>
+      </div>
+
+      <!-- FOOTER SECTION -->
+    </main>
+  </body>
+</html>
+
+<script src="./js/index.js" type="module"></script>
+
+<!-- 
+    LIVE SERVER
+
+    http://127.0.0.1:5500/index.html
+ -->
+
+<!-- 
+    API 
+
+    https://api-ninjas.com/api/hobbies
+  -->
+
+<!-- 
+    FIGMA
+
+    https://www.figma.com/file/ajHqFUJVbLNgyeynXnjlnF/Untitled?type=design&node-id=0-1&mode=design&t=EWEDWvhWv83A65RZ-0
+   -->

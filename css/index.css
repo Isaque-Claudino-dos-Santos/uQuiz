@@ -1,0 +1,157 @@
+@import url("reset.css");
+@import url("var.css");
+
+body {
+  background-color: var(--back-1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 80%;
+  background-color: white;
+  height: 100vh;
+}
+
+/* HEADER */
+
+.heading {
+  height: 90px;
+  background-color: white;
+  box-shadow: 4px 12px 8px -8px rgba(0, 0, 0, 0.1);
+}
+
+.heading-logo {
+  color: #0066ff;
+  margin: 10px 15px;
+  font-size: 50px;
+}
+
+/* INPUT SECTION */
+
+.input-container {
+  max-width: 80%;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5% 10%;
+}
+
+.heading-category {
+  color: #0066ff;
+  font-size: 30px;
+}
+
+.category-container {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+/* HINT SECTION */
+
+.hint-set {
+  width: 30%;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  background-color: blue;
+}
+
+/* FOOTER SECTION */
+
+.footer {
+  padding: 30px;
+  background-color: #0066ff;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-itens {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  height: 85%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-itens span {
+  padding: 0.5em;
+}
+
+
+
+/* ID CONFIG */
+
+#response {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f8f8f8;
+  color: black;
+  padding: 14px 20px;
+  border: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#btn-submit {
+  background-color: #4d88ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+
+.a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.categoria {
+  width: 30%;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  background-color: #f8f8f8;
+  color: black;
+  padding: 18px 30px;
+  border: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+.stats{
+  width: 30%;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  background-color: #ff0000;
+  color: black;
+  padding: 18px 30px;
+  border: 1px;
+  cursor: pointer;
+  height: 20%;
+}
+

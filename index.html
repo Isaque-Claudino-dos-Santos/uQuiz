@@ -22,7 +22,8 @@
         />
         <img src="./img/Lupa_Search.svg" alt="Lupe" />
         <div class="butt">
-          <button type="button" id="btn-submit">Enviar</button>
+          <button id="btn-submit" class="btn">Enviar</button>
+          <button id="btn-skip" class="btn">pular</button>
         </div>
       </div>
 
@@ -30,48 +31,59 @@
 
       <div class="category-container">
         <h3 class="heading-category">Categorias:</h3>
-        <input type="radio" id="general" name="category" value="General" />
-        <label for="general">Geral</label><br />
-        <input
-          type="radio"
-          id="sports_and_outdoors"
-          name="category"
-          value="Sports and Outdoors"
-        />
-        <label for="sports_and_outdoors">Esportes</label><br />
-        <input type="radio" id="education" name="category" value="Education" />
-        <label for="education">Educação</label>
-        <input
-          type="radio"
-          id="collection"
-          name="category"
-          value="Collection"
-        />
-        <label for="collection">Coleções</label>
-        <input
-          type="radio"
-          id="competition"
-          name="category"
-          value="Competition"
-        />
-        <label for="competition">Competição</label>
-        <input
-          type="radio"
-          id="observation"
-          name="category"
-          value="Observation"
-        />
-        <label for="observation">Observação</label>
+        <div class="categ-1">
+          <input type="radio" id="general" name="category" value="general" />
+          <label for="general">Geral</label><br />
+          <input
+            type="radio"
+            id="sports_and_outdoors"
+            name="category"
+            value="esportes"
+          />
+          <label for="sports_and_outdoors">Esportes</label><br />
+          <input
+            type="radio"
+            id="education"
+            name="category"
+            value="education"
+          />
+          <label for="education">Educação</label>
+        </div>
+        <div class="categ-2">
+          <input
+            type="radio"
+            id="collection"
+            name="category"
+            value="collection"
+          />
+          <label class="label-categ" for="collection">Coleções</label>
+          <input
+            type="radio"
+            id="competition"
+            name="category"
+            value="competition"
+          />
+          <label for="competition">Competição</label>
+          <input
+            type="radio"
+            id="observation"
+            name="category"
+            value="observation"
+          />
+          <label for="observation">Observação</label>
+        </div>
       </div>
 
       <!-- DICA -->
       <div class="hint">
-        <p class="hint-set">DICA AQUI</p>
+        <p class="hint-set" id="tip">DICA AQUI</p>
       </div>
 
       <!-- STATS BLOCK -->
-      <div class="stats">
-        <p name="results_Feedback" id="feedback-response">Estatistica:</p>
+      <div class="stats" id="statistics">
+        <h3>Estatistica:</h3>
+        <p>Erros: <span>2</span></p>
+        <p>acertos: <span>2</span></p>
       </div>
 
       <!-- SENTS -->
@@ -94,10 +106,16 @@
  -->
 
 <!-- 
-    API 
+    REST API HOBIIES 
 
     https://api-ninjas.com/api/hobbies
   -->
+
+<!-- 
+  REST API WIKI
+
+  https://www.mediawiki.org/wiki/API:REST_API
+ -->
 
 <!-- 
     FIGMA

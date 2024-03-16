@@ -1,3 +1,15 @@
-import AppController from "./Controllers/AppController.js";
+import App from "./App.js";
 
-new AppController().boot();
+const app = new App();
+
+window.addEventListener("load", async () => {
+  await app.startQuiz();
+});
+
+app.buttonSubmit.$element.addEventListener("click", async () => {
+  await app.HandlerButtonSubmit();
+});
+
+app.buttonSkip.$element.addEventListener("click", async () => {
+  await app.restartQuiz();
+});

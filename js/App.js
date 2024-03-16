@@ -1,4 +1,4 @@
-import Storage from "./DB/storage.js";
+import Storage from "./DB/Storage.js";
 import api from "./Http/Api/index.js";
 
 export default class App {

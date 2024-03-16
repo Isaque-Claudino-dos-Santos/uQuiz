@@ -1,15 +1,22 @@
+import ButtonSkipController from "./Controllers/ButtonSkipController.js";
+import ButtonSubmitController from "./Controllers/ButtonSubmitController.js";
+import InputResponseController from "./Controllers/InputResponseController.js";
+import ListAttempController from "./Controllers/ListAttemptController.js";
+import RadiusCategoriesController from "./Controllers/RadiusCategoriesController.js";
+import TipElementController from "./Controllers/TipElementController.js";
 import App from "./App.js";
 
 const app = new App();
 
-window.addEventListener("load", async () => {
-  await app.startQuiz();
-});
+const listAttemps = new ListAttempController(app);
+const inputResponse = new InputResponseController(app);
 
-app.buttonSubmit.$element.addEventListener("click", async () => {
-  await app.HandlerButtonSubmit();
-});
+listAttemps.boot();
+inputResponse.boot();
 
-app.buttonSkip.$element.addEventListener("click", async () => {
-  await app.restartQuiz();
-});
+new ButtonSkipController(app).boot();
+new TipElementController(app).boot();
+new RadiusCategoriesController(app).boot();
+new ButtonSubmitController(app).boot({ listAttemps, inputResponse });
+
+console.log(app);

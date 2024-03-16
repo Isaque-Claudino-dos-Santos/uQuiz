@@ -1,4 +1,6 @@
-export default class TipElementController {
+import Controller from "./Controller.js";
+
+export default class TipElementController extends Controller{
   $element = document.querySelector("#tip");
 
   addTip(text) {

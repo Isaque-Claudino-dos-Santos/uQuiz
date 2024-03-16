@@ -1,43 +1,31 @@
-import ButtonSkipController from "./Controllers/ButtonSkipController.js";
-import ButtonSubmitController from "./Controllers/ButtonSubmitController.js";
-import InputResponseController from "./Controllers/InputResopnseController.js";
-import ListAttempController from "./Controllers/ListAttemptController.js";
-import QuizController from "./Controllers/QuizController.js";
-import RadiusCategoriesController from "./Controllers/RadiusCategoriesController.js";
-import TipElementController from "./Controllers/TipElementController.js";
+import Storage from "./DB/storage.js";
 
 export default class App {
-  quiz = new QuizController();
-  inputResponse = new InputResponseController();
-  buttonSubmit = new ButtonSubmitController();
-  buttonSkip = new ButtonSkipController();
-  listAttempt = new ListAttempController();
-  tip = new TipElementController();
-  inputRadiusCategorys = new RadiusCategoriesController();
+  storage = new Storage("quiz_app_storage", {
+    inputResponseValue: "",
+    started: false,
+    category: "general",
+    attemps: [],
+  });
 
-  async startQuiz() {
-    const category = this.inputRadiusCategorys.getChecked() ?? "general";
-    await this.quiz.start(category);
+  inputResponseValue = "";
+  started = false;
+  category = "general";
+  attemps = [];
 
-    this.tip.addTip(this.quiz.wiki.content);
+  setInputResponseValue(value) {
+    this.inputResponseValue = value;
+    this.storage.put({ inputResponseValue: value });
   }
 
-  async restartQuiz() {
-    const category = this.inputRadiusCategorys.getChecked() ?? "general";
-    await this.quiz.restart(category);
-
-    this.tip.addTip(this.quiz.wiki.content);
+  setCategory(value) {
+    this.category = value;
+    this.storage.put({ category: value });
   }
 
-  async HandlerButtonSubmit() {
-    const attempResponse = this.inputResponse.getValue();
-
-    const isCorrectResponse = this.quiz.isCorrectResponse(attempResponse);
-
-    this.listAttempt.createItem(attempResponse);
-
-    if (isCorrectResponse) {
-      alert("você acertou");
-    }
+  addAttemp() {
+    const value = this.inputResponseValue
+    this.storage.put({ attemps: [...this.attemps, value] });
+    this.attemps = this.attemps.concat(value);
   }
 }

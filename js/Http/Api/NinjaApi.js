@@ -1,3 +1,4 @@
+import HobbyResource from "../Resources/HobbyResource.js";
 import HttpClient from "../Services/HttpClient.js";
 
 export default class NinjaApi extends HttpClient {
@@ -8,13 +9,31 @@ export default class NinjaApi extends HttpClient {
   };
 
   async getHobbie(category) {
-    return await this.json()
+    const request = await this.json()
       .path("/hobbies")
       .param("category", category)
       .fetch();
+
+    if (request.status === 200)
+      return HobbyResource(await request.json()).get();
+
+    return {
+      success: false,
+      error: await request.json(),
+    };
   }
 
   async getRandomWord(type) {
-    return await this.json().path("/randomword").param("type", type).fetch();
+    const request = await this.json()
+      .path("/randomword")
+      .param("type", type)
+      .fetch();
+
+    if (request.status === 200) return await request.json().word;
+
+    return {
+      success: false,
+      error: await request.json(),
+    };
   }
 }

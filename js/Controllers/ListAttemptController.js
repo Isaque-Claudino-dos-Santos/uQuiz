@@ -8,10 +8,9 @@ export default class ListAttempController extends Controller {
     const $li = document.createElement("li");
     $li.textContent = text;
     this.$element.appendChild($li);
-    return;
   }
 
-  boot(data) {
+  boot() {
     //------
     //LOAD LOCAL STORAGE
     //------

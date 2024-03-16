@@ -19,5 +19,9 @@ export default class Controller {
     this.app = app;
   }
 
+  skeleton() {}
+
+  loaded() {}
+
   boot(data = null) {}
 }

@@ -1,3 +1,4 @@
+import QuizFeatures from "../Features/QuizFeatures.js";
 import Controller from "./Controller.js";
 
 export default class InputResponseController extends Controller {
@@ -9,12 +10,31 @@ export default class InputResponseController extends Controller {
     this.$element.value = data;
   }
 
-  boot() {
+  clearValue() {
+    this.app.inputResponseValue = "";
+    this.app.storage.put({ inputResponseValue: "" });
+    this.value("");
+  }
+
+  /**
+   *
+   * @param {{quizFeatures: QuizFeatures}} data
+   */
+  boot(data) {
+    const { quizFeatures } = data;
     //---------
     // EVENTS
     //---------
     this.$element.addEventListener("keyup", () => {
       this.app.setInputResponseValue(this.value());
+    });
+
+    this.$element.addEventListener("keypress", (event) => {
+      const { code } = event;
+
+      if (code === "Enter") {
+        quizFeatures.attempResponse();
+      }
     });
 
     //-------------------

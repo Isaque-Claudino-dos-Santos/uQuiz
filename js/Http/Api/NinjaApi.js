@@ -9,31 +9,31 @@ export default class NinjaApi extends HttpClient {
   };
 
   async getHobbie(category) {
-    const request = await this.json()
+    return this.json()
       .path("/hobbies")
       .param("category", category)
-      .fetch();
-
-    if (request.status === 200)
-      return HobbyResource(await request.json()).get();
-
-    return {
-      success: false,
-      error: await request.json(),
-    };
+      .fetch()
+      .then(async (response) => {
+        if (response.status === 200)
+          return new HobbyResource(await response.json()).get();
+      })
+      .catch((error) => ({
+        success: false,
+        error: error,
+      }));
   }
 
   async getRandomWord(type) {
-    const request = await this.json()
+    return this.json()
       .path("/randomword")
       .param("type", type)
-      .fetch();
-
-    if (request.status === 200) return await request.json().word;
-
-    return {
-      success: false,
-      error: await request.json(),
-    };
+      .fetch()
+      .then(async (response) => {
+        return await response.json().word;
+      })
+      .catch((error) => ({
+        success: false,
+        error: error,
+      }));
   }
 }

@@ -1,6 +1,7 @@
 import { htmlEncode } from "../../utils.js";
 
 export default class WikiResource {
+  success = true;
   title = "";
   describe = "";
   content = "";
@@ -9,7 +10,7 @@ export default class WikiResource {
     const page = data.pages[0];
     this.title = page?.title;
     this.describe = page?.describe;
-    this.content = htmlEncode(page?.excerpt);
+    this.content = htmlEncode(page?.excerpt ?? "");
   }
 
   get() {

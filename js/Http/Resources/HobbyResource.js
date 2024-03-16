@@ -1,4 +1,6 @@
 export default class HobbyResource {
+  success = true;
+
   constructor(data) {
     const { hobby, link, category } = data;
     this.name = hobby;
@@ -8,7 +10,7 @@ export default class HobbyResource {
 
   get() {
     return {
-      hobby: this.name,
+      name: this.name,
       link: this.link,
       category: this.category,
     };

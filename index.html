@@ -7,71 +7,60 @@
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <!-- SEARCH AREA -->
-    <main class="container">
-      <header class="heading">
-        <h1 class="heading-logo">iQUIZ</h1>
+    <main>
+      <header>
+        <h1 class="logo">uQUIZ</h1>
       </header>
 
-      <div class="input-container">
-        <input
-          type="text"
-          id="response"
-          name="pesquisa"
-          placeholder="Search..."
-          autocomplete="off"
-        />
-        <img src="./img/Lupa_Search.svg" alt="Lupe" />
-        <div class="butt">
+      <div class="form">
+        <label class="input-search">
+          <input
+            type="search"
+            id="response"
+            placeholder="Search..."
+            autocomplete="off"
+          />
+          <img src="./img/Lupa_Search.svg" alt="Lupe" class="icon" />
+        </label>
+        <div>
           <button id="btn-submit" class="btn">Enviar</button>
           <button id="btn-skip" class="btn">pular</button>
         </div>
       </div>
 
       <!-- CATEGORIA -->
+      <div class="categories">
+        <h3 class="categories__title">Categorias:</h3>
+        <div>
+          <label for="general">
+            <input type="radio" id="general" name="category" value="general" />
+            Geral
+          </label>
 
-      <div class="category-container">
-        <h3 class="heading-category">Categorias:</h3>
-        <div class="categ-1">
-          <input type="radio" id="general" name="category" value="general" />
-          <label for="general">Geral</label><br />
-          <input
-            type="radio"
-            id="sports_and_outdoors"
-            name="category"
-            value="sports_and_outdoors"
-          />
-          <label for="sports_and_outdoors">Esportes</label><br />
-          <input
-            type="radio"
-            id="education"
-            name="category"
-            value="education"
-          />
-          <label for="education">Educação</label>
-        </div>
-        <div class="categ-2">
-          <input
-            type="radio"
-            id="collection"
-            name="category"
-            value="collection"
-          />
-          <label class="label-categ" for="collection">Coleções</label>
-          <input
-            type="radio"
-            id="competition"
-            name="category"
-            value="competition"
-          />
-          <label for="competition">Competição</label>
-          <input
-            type="radio"
-            id="observation"
-            name="category"
-            value="observation"
-          />
-          <label for="observation">Observação</label>
+          <label>
+            <input type="radio" name="category" value="sports_and_outdoors" />
+            Esportes
+          </label>
+
+          <label>
+            <input type="radio" name="category" value="education" />
+            Educação
+          </label>
+
+          <label>
+            <input type="radio" name="category" value="collection" />
+            Coleções
+          </label>
+
+          <label>
+            <input type="radio" name="category" value="competition" />
+            Competição
+          </label>
+
+          <label>
+            <input type="radio" name="category" value="observation" />
+            Observação
+          </label>
         </div>
       </div>
 

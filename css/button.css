@@ -2,7 +2,8 @@
   width: 100%;
 
   display: flex;
-  justify-content: end;
+  justify-content: space-around;
+  flex-wrap: wrap;
 
   padding: 1em;
 }
@@ -11,7 +12,7 @@
   text-align: center;
 
   border-radius: 10px;
-  border: 3px solid rgba(249, 249, 249, 21%);
+  border: 2px solid rgba(249, 249, 249, 21%);
 
   padding: 0.5em 3em;
 
@@ -23,6 +24,4 @@
   color: white;
 
   cursor: pointer;
-
-  margin-left: 2em;
 }

@@ -1,0 +1,25 @@
+.categories {
+  color: #696969;
+
+    padding: 1.24em;
+}
+
+.categories__title {
+  padding: 0.24em;
+}
+
+.categories__options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.categories__options label {
+  display: flex;
+  width: max-content;
+  padding: 0.48em;
+}
+
+.categories__options input {
+  margin-right: 1em;
+}

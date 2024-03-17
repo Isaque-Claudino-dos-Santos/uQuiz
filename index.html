@@ -3,112 +3,151 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>API Dog</title>
+    <title>uQuiz</title>
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="icon" type="image/x-icon" href="./img/letra-u.png">
   </head>
   <body>
-    <main>
+    <div class="container">
       <header>
-        <h1 class="logo">uQUIZ</h1>
+        <h1 class="title">uQUIZ</h1>
       </header>
 
-      <div class="form">
+      <main>
         <label class="input-search">
-          <input
-            type="search"
-            id="response"
-            placeholder="Search..."
-            autocomplete="off"
-          />
-          <img src="./img/Lupa_Search.svg" alt="Lupe" class="icon" />
+          <input type="search" id="response" autocomplete="off" />
+          <img src="./img/lupa.svg" alt="Lupe" class="icon" />
         </label>
-        <div>
+
+        <div class="btns">
           <button id="btn-submit" class="btn">Enviar</button>
-          <button id="btn-skip" class="btn">pular</button>
+          <button id="btn-skip" class="btn">Pular</button>
+          <button id="btn-reset" class="btn">Reset</button>
         </div>
-      </div>
 
-      <!-- CATEGORIA -->
-      <div class="categories">
-        <h3 class="categories__title">Categorias:</h3>
-        <div>
-          <label for="general">
-            <input type="radio" id="general" name="category" value="general" />
-            Geral
-          </label>
+        <section class="quiz_options">
+          <!----------------- 
+          ---- CATEGORIES --- 
+          ------------------>
+          <div class="categories">
+            <h3 class="categories__title">Categorias:</h3>
+            <div class="categories__options">
+              <label>
+                <input
+                  type="radio"
+                  id="general"
+                  name="category"
+                  value="general"
+                />
+                Geral
+              </label>
 
-          <label>
-            <input type="radio" name="category" value="sports_and_outdoors" />
-            Esportes
-          </label>
+              <label>
+                <input
+                  type="radio"
+                  name="category"
+                  value="sports_and_outdoors"
+                />
+                Esportes
+              </label>
 
-          <label>
-            <input type="radio" name="category" value="education" />
-            Educação
-          </label>
+              <label>
+                <input type="radio" name="category" value="education" />
+                Educação
+              </label>
 
-          <label>
-            <input type="radio" name="category" value="collection" />
-            Coleções
-          </label>
+              <label>
+                <input type="radio" name="category" value="collection" />
+                Coleções
+              </label>
 
-          <label>
-            <input type="radio" name="category" value="competition" />
-            Competição
-          </label>
+              <label>
+                <input type="radio" name="category" value="competition" />
+                Competição
+              </label>
 
-          <label>
-            <input type="radio" name="category" value="observation" />
-            Observação
-          </label>
+              <label>
+                <input type="radio" name="category" value="observation" />
+                Observação
+              </label>
+            </div>
+          </div>
+
+          <!----------- 
+          ---- HITS --- 
+          ------------>
+          <div class="hint">
+            <h3 class="hint__title">Dica:&nbsp;</h3>
+            <p class="hint__text" id="tip"></p>
+          </div>
+        </section>
+
+        <div class="lists">
+          <!----------------- 
+          ---- STATISTICS --- 
+          ------------------>
+          <div class="statistics">
+            <h3 class="statistics__title">Estatísticas</h3>
+            <ul class="statistics__list" id="statistics"></ul>
+          </div>
+
+          <!--------------- 
+          ---- ATTEMPTS --- 
+          ---------------->
+          <div class="attempt">
+            <h3 class="attemp__title">Histórico de envios</h3>
+            <ul class="attempt__list" id="attempt"></ul>
+          </div>
         </div>
-      </div>
+      </main>
 
-      <!-- DICA -->
-      <div class="hint">
-        <p class="hint-set" id="tip"></p>
-      </div>
+      <footer>
+        <h3 class="footer__title">Trabalho: Requesição de APIs</h3>
+        <div class="footer_lists">
+          <ul class="list__curse">
+            <li>
+              <span>Professor:&nbsp;</span>
+              <span>Fernando Emrich</span>
+            </li>
+            <li>
+              <span>Disciplina:&nbsp;</span>
+              <span>Informatica instrumental</span>
+            </li>
+            <li>
+              <span>Turma:&nbsp;</span>
+              <span>Informatica 2° Periodo</span>
+            </li>
+            <li>
+              <span>APIs Utilizada:&nbsp;</span>
+              <a href="https://api-ninjas.com"> API Ninjas </a>
+              &nbsp;-&nbsp;
+              <a href="https://www.mediawiki.org/wiki/API:REST_API">
+                Rest API Wiki
+              </a>
+            </li>
+          </ul>
+          <ul class="list__devs">
+            <li>
+              <span>CSS:&nbsp;</span>
+              <span>Fernando e Augusto</span>
+            </li>
+            <li>
+              <span>HTML:&nbsp;</span>
+              <span>Willian</span>
+            </li>
+            <li>
+              <span>JAVASCPRIT:&nbsp;</span>
+              <span>Isaque</span>
+            </li>
+            <li>
+              <span>DESIGN:&nbsp;</span>
+              <span>Ledson</span>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
 
-      <!-- STATS BLOCK -->
-      <div class="stats" id="statistics">
-        <h3>Estatistica:</h3>
-        <p>Erros: <span>2</span></p>
-        <p>acertos: <span>2</span></p>
-      </div>
-
-      <!-- SENTS -->
-
-      <div class="Lista">
-        <ul id="attempt"></ul>
-      </div>
-
-      <!-- FOOTER SECTION -->
-    </main>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>
-
-<script src="./js/index.js" type="module"></script>
-
-<!-- 
-    LIVE SERVER
-
-    http://127.0.0.1:5500/index.html
- -->
-
-<!-- 
-    REST API HOBIIES 
-
-    https://api-ninjas.com/api/hobbies
-  -->
-
-<!-- 
-  REST API WIKI
-
-  https://www.mediawiki.org/wiki/API:REST_API
- -->
-
-<!-- 
-    FIGMA
-
-    https://www.figma.com/file/ajHqFUJVbLNgyeynXnjlnF/Untitled?type=design&node-id=0-1&mode=design&t=EWEDWvhWv83A65RZ-0
-   -->

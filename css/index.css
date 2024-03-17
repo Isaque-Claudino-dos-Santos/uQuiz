@@ -1,0 +1,48 @@
+@import "./reset.css";
+@import "./var.css";
+@import "./text.css";
+@import "./header.css";
+@import "./input.css";
+@import "./button.css";
+@import "./list.css";
+@import "./categories.css";
+@import "./footer.css";
+
+body {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+main {
+  padding: 2em;
+}
+
+.btns,
+.input-search {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.quiz_options {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+
+  padding: 1.24em;
+}
+
+.hint__title {
+  align-self: self-start;
+}

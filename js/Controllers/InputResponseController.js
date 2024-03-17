@@ -4,6 +4,7 @@ import Controller from "./Controller.js";
 export default class InputResponseController extends Controller {
   /**@type {HTMLInputElement} */
   $element = document.querySelector("#response");
+  $icon = document.querySelector(".input-search .icon");
 
   value(data = null) {
     if (data === null) return this.$element.value;
@@ -35,6 +36,10 @@ export default class InputResponseController extends Controller {
       if (code === "Enter") {
         quizFeatures.attempResponse();
       }
+    });
+
+    this.$element.addEventListener("click", () => {
+      quizFeatures.attempResponse();
     });
 
     //-------------------

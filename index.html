@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>uQuiz</title>
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/devices/desktop.css">
-    <link rel="stylesheet" href="./css/devices/mobile.css">
-    <link rel="icon" type="image/x-icon" href="./img/letra-u.png">
+    <link rel="stylesheet" href="./css/devices/desktop.css" />
+    <link rel="stylesheet" href="./css/devices/mobile.css" />
+    <link rel="icon" type="image/x-icon" href="./img/letra-u.png" />
   </head>
   <body>
     <div class="container">
@@ -17,7 +17,12 @@
 
       <main>
         <label class="input-search">
-          <input type="search" id="response" autocomplete="off" />
+          <input
+            type="search"
+            id="response"
+            autocomplete="off"
+            placeholder="Leia a dica e escreva qual seria o título do passatempo relacionado."
+          />
           <img src="./img/lupa.svg" alt="Lupe" class="icon" />
         </label>
 
@@ -97,58 +102,61 @@
           ---- ATTEMPTS --- 
           ---------------->
           <div class="attempt">
-            <h3 class="attemp__title">Histórico de envios</h3>
+            <h3 class="attemp__title">
+              Histórico de envios <span id="attempt-clear">x</span>
+            </h3>
+
             <ul class="attempt__list" id="attempt"></ul>
           </div>
         </div>
       </main>
-
-      <footer>
-        <h3 class="footer__title">Trabalho: Requesição de APIs</h3>
-        <div class="footer_lists">
-          <ul class="list__curse">
-            <li>
-              <span>Professor:&nbsp;</span>
-              <span>Fernando Emrich</span>
-            </li>
-            <li>
-              <span>Disciplina:&nbsp;</span>
-              <span>Informatica instrumental</span>
-            </li>
-            <li>
-              <span>Turma:&nbsp;</span>
-              <span>Informatica 2° Periodo</span>
-            </li>
-            <li>
-              <span>APIs Utilizada:&nbsp;</span>
-              <a href="https://api-ninjas.com"> API Ninjas </a>
-              &nbsp;-&nbsp;
-              <a href="https://www.mediawiki.org/wiki/API:REST_API">
-                Rest API Wiki
-              </a>
-            </li>
-          </ul>
-          <ul class="list__devs">
-            <li>
-              <span>CSS:&nbsp;</span>
-              <span>Fernando e Augusto</span>
-            </li>
-            <li>
-              <span>HTML:&nbsp;</span>
-              <span>Willian</span>
-            </li>
-            <li>
-              <span>JAVASCPRIT:&nbsp;</span>
-              <span>Isaque</span>
-            </li>
-            <li>
-              <span>DESIGN:&nbsp;</span>
-              <span>Ledson</span>
-            </li>
-          </ul>
-        </div>
-      </footer>
     </div>
+
+    <footer>
+      <h3 class="footer__title">Trabalho: Requesição de APIs</h3>
+      <div class="footer_lists">
+        <ul class="list__curse">
+          <li>
+            <span>Professor:&nbsp;</span>
+            <span>Fernando Emrich</span>
+          </li>
+          <li>
+            <span>Disciplina:&nbsp;</span>
+            <span>Informatica instrumental</span>
+          </li>
+          <li>
+            <span>Turma:&nbsp;</span>
+            <span>Informatica 2° Periodo</span>
+          </li>
+          <li>
+            <span>APIs Utilizada:&nbsp;</span>
+            <a href="https://api-ninjas.com"> API Ninjas </a>
+            &nbsp;-&nbsp;
+            <a href="https://www.mediawiki.org/wiki/API:REST_API">
+              Rest API Wiki
+            </a>
+          </li>
+        </ul>
+        <ul class="list__devs">
+          <li>
+            <span>CSS:&nbsp;</span>
+            <span>Fernando e Augusto</span>
+          </li>
+          <li>
+            <span>HTML:&nbsp;</span>
+            <span>Willian</span>
+          </li>
+          <li>
+            <span>JAVASCPRIT:&nbsp;</span>
+            <span>Isaque</span>
+          </li>
+          <li>
+            <span>DESIGN:&nbsp;</span>
+            <span>Ledson</span>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
     <script src="./js/index.js" type="module"></script>
   </body>

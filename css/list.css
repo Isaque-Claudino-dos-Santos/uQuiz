@@ -11,7 +11,7 @@
 
 .attemp__title,
 .statistics__title {
-    padding-bottom: 1.12em;
+  padding-bottom: 1.12em;
 }
 
 .statistics__list,
@@ -23,7 +23,7 @@
 }
 
 .attempt__list {
-  overflow-y: scroll;
+  overflow: auto;
 }
 
 .attempt {
@@ -31,4 +31,18 @@
   background-color: #e5edff;
   border: 1px solid #3c6ce8;
   box-shadow: 1px 1px 4px 2px #d0dbf5;
+}
+
+#attempt-clear {
+  color: #3c6ce8;
+  cursor: pointer;
+  align-items: end;
+  float: right;
+}
+
+#attempt-clear:hover#attempt-clear::before  {
+    content: 'clear';
+    vertical-align: middle;
+    font-size: .6em;
+    margin-right: .24em;
 }

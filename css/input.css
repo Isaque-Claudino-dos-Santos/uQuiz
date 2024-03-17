@@ -12,8 +12,6 @@
 
   background-color: #f9f9f9;
   box-shadow: 1px 1px 4px 2px #d0dbf5;
-
-  cursor: pointer;
 }
 
 .input-search input {
@@ -29,6 +27,7 @@
 .input-search .icon {
   object-fit: cover;
   scale: 0.6;
+  cursor: pointer;
 }
 
 /* CUSTOM RADIO */

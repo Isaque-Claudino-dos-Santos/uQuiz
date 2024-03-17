@@ -42,3 +42,5 @@ buttonSubmit.boot({ quizFeatures });
 inputResponse.boot({ quizFeatures });
 radiusCategories.boot({ quizFeatures });
 buttonReset.boot();
+
+alert(env.API_NINJA_TOKEN)

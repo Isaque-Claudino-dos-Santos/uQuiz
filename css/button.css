@@ -1,0 +1,27 @@
+.btns {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  padding: 1em;
+}
+
+.btn {
+  text-align: center;
+
+  border-radius: 10px;
+  border: 2px solid rgba(249, 249, 249, 21%);
+
+  padding: 0.5em 3em;
+
+  font-size: 1.24em;
+  text-decoration: none;
+  font-weight: bold;
+
+  background-color: #4d88ff;
+  color: white;
+
+  cursor: pointer;
+}

@@ -1,0 +1,29 @@
+footer {
+  background-color: #3c6ce8;
+  color: #ffffff;
+
+  padding: 2em;
+}
+
+.footer__title {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 1.24em;
+}
+
+.footer_lists {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_lists ul li {
+  padding: 0.24em;
+}
+
+.footer_lists ul li span:nth-child(1) {
+  font-weight: bold;
+}
+
+.footer_lists ul li span:nth-child(2) {
+  font-weight: lighter;
+}

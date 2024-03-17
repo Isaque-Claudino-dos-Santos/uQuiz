@@ -1,5 +1,6 @@
 import QuizFeatures from "../Features/QuizFeatures.js";
 import Controller from "./Controller.js";
+import StatisticsController from "./StatisticsController.js";
 import TipElementController from "./TipElementController.js";
 export default class RadiusCategoriesController extends Controller {
   /**@type {HTMLInputElement[]} */
@@ -28,7 +29,7 @@ export default class RadiusCategoriesController extends Controller {
 
   /**
    *
-   * @param {{quizFeatures: QuizFeatures}} data
+   * @param {{quizFeatures: QuizFeatures,statistics :StatisticsController}} data
    */
   async boot(data) {
     const { quizFeatures } = data;
@@ -46,7 +47,6 @@ export default class RadiusCategoriesController extends Controller {
         this.app.setCategory(category);
 
         await quizFeatures.addTipAfterRequestDataQuiz();
-        this.app.setTotalSkip(this.app.totalSkips + 1);
       });
     });
 

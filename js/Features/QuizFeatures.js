@@ -2,7 +2,7 @@ import Feature from "./Feature.js";
 
 export default class QuizFeatures extends Feature {
   attempResponse() {
-    const { listAttemps, inputResponse } = this.data;
+    const { listAttemps, inputResponse, statistics } = this.data;
 
     const value = this.app.inputResponseValue;
 
@@ -14,6 +14,9 @@ export default class QuizFeatures extends Feature {
 
     //Clear input value
     inputResponse.clearValue("");
+
+    //render statistics
+    statistics.setTextTotalAttemp();
   }
 
   async addTipAfterRequestDataQuiz() {

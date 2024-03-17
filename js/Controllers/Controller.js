@@ -23,5 +23,9 @@ export default class Controller {
 
   loaded() {}
 
+  /**
+   * Chamando quando o applicativo inicia
+   * @param {unknown} data  
+   */
   boot(data = null) {}
 }

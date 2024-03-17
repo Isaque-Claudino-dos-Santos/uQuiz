@@ -11,4 +11,6 @@
   scrollbar-color: #4d88ff #e5edff;
   scrollbar-width: thin;
   scroll-behavior: smooth;
+
+  transition-duration: 0.3s;
 }

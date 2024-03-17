@@ -1,6 +1,7 @@
 .lists {
   display: flex;
   justify-content: space-around;
+  color: #3d4867;
 }
 
 .statistics,
@@ -11,7 +12,7 @@
 
 .attemp__title,
 .statistics__title {
-  padding-bottom: 1.12em;
+  padding-bottom: .48em;
 }
 
 .statistics__list,
@@ -20,6 +21,15 @@
   max-height: 15em;
 
   padding: 1.24em;
+}
+
+.statistics__list li,
+.attempt__list li{
+    padding: .24em;
+}
+
+.statistics__list li span {
+  font-weight: bold;
 }
 
 .attempt__list {
@@ -40,9 +50,9 @@
   float: right;
 }
 
-#attempt-clear:hover#attempt-clear::before  {
-    content: 'clear';
-    vertical-align: middle;
-    font-size: .6em;
-    margin-right: .24em;
+#attempt-clear:hover#attempt-clear::before {
+  content: "clear";
+  vertical-align: middle;
+  font-size: 0.6em;
+  margin-right: 0.24em;
 }

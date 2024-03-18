@@ -38,7 +38,7 @@ export default class InputResponseController extends Controller {
       }
     });
 
-    this.$element.addEventListener("click", () => {
+    this.$icon.addEventListener("click", () => {
       quizFeatures.attempResponse();
     });
 

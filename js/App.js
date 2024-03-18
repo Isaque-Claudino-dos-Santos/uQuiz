@@ -11,6 +11,7 @@ export default class App {
     describe: null,
     totalSkips: 0,
     totalErrors: 0,
+    totalCorrectResponse: 0,
   });
 
   inputResponseValue = "";
@@ -22,6 +23,7 @@ export default class App {
   loading = false;
   totalSkips = 0;
   totalErrors = 0;
+  totalCorrectResponse = 0;
 
   constructor() {
     Object.assign(this, this.storage.get());
@@ -45,6 +47,11 @@ export default class App {
   setTotalError(value) {
     this.totalErrors = value;
     this.storage.put({ totalErrors: value });
+  }
+
+  setTotalCorrectResponse(value) {
+    this.totalCorrectResponse = value;
+    this.storage.put({ totalCorrectResponse: value });
   }
 
   async requestDataQuiz() {

@@ -12,6 +12,10 @@ export default class App {
     totalSkips: 0,
     totalErrors: 0,
     totalCorrectResponse: 0,
+    timer: {
+      min: 5,
+      sec: 5,
+    },
   });
 
   inputResponseValue = "";
@@ -24,6 +28,10 @@ export default class App {
   totalSkips = 0;
   totalErrors = 0;
   totalCorrectResponse = 0;
+  timer = {
+    min: 5,
+    sec: 5,
+  };
 
   constructor() {
     Object.assign(this, this.storage.get());
@@ -52,6 +60,16 @@ export default class App {
   setTotalCorrectResponse(value) {
     this.totalCorrectResponse = value;
     this.storage.put({ totalCorrectResponse: value });
+  }
+
+  setTimerMin(value) {
+    this.timer.min = value;
+    this.storage.put({ timer: { ...this.timer, min: value } });
+  }
+
+  setTimerSec(value) {
+    this.timer.sec = value;
+    this.storage.put({ timer: { ...this.timer, sec: value } });
   }
 
   async requestDataQuiz() {

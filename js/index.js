@@ -10,6 +10,7 @@ import RadiusCategoriesController from "./Controllers/RadiusCategoriesController
 import TipElementController from "./Controllers/TipElementController.js";
 import ButtonResetController from "./Controllers/ButtonResetController.js";
 import StatisticsController from "./Controllers/StatisticsController.js";
+import TimerController from "./Controllers/TimerController.js";
 
 const app = new App();
 
@@ -24,6 +25,8 @@ const radiusCategories = new RadiusCategoriesController(app);
 const buttonSubmit = new ButtonSubmitController(app);
 const buttonReset = new ButtonResetController(app);
 const statistics = new StatisticsController(app);
+const timerController = new TimerController(app);
+
 //------------
 // INSTANCES FEATURES
 //------------
@@ -45,3 +48,4 @@ inputResponse.boot({ quizFeatures });
 radiusCategories.boot({ quizFeatures, statistics });
 buttonReset.boot();
 statistics.boot();
+timerController.boot();

@@ -1,0 +1,13 @@
+.timer__title {
+    color: #696969;
+}
+
+.timer__text {
+    display: flex;
+}
+
+#timer-min,
+#timer-sec {
+    color: #3c6ce8;
+    font-weight: 600;
+}

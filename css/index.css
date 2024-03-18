@@ -7,6 +7,7 @@
 @import "./list.css";
 @import "./categories.css";
 @import "./footer.css";
+@import "./timer.css";
 
 body {
   height: 100vh;

@@ -8,8 +8,6 @@ export default class QuizFeatures extends Feature {
 
     if (!value || value === "") return;
 
-    console.log(this.app.hobby);
-
     if (this.app.hobby === value) {
       alert("Sua resposta está correta");
       this.app.setTotalCorrectResponse(this.app.totalCorrectResponse + 1);
